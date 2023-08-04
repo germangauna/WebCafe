@@ -1,0 +1,216 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+/*PARA  QUE NO SEA TAN BRUSCO EL SCROOL USAMOS: scroll-behavior: smooth;*/
+
+body {
+    background-color: rgb(138, 128, 128);
+}
+
+/*HEADER, para empezar con el header, ponemos un background color para identioficarlo, despues un display flex para hacerlo responsive, y poder usar los estilos, en este caso usaremos flex-direccion column para que nis quede separados*/
+
+header {
+    background-color: rgb(32, 15, 15);
+    display: flex;
+    flex-direction: column;
+}
+
+/* con respecto al width pongo el 100% al padre, y divido entre los hisjos el 70 % para el nav__list y el 30% para el nav a*/
+
+/*NAV,  displey flex con un widh del 100% lo centramos, le ponemos un pading y el background color pra diferenciarlo*/
+.nav {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 20px 10px;
+    background-color: #eee;
+
+}
+
+.logo {
+    font-size: larger;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+/* al logo / titulo le poenmos un width de lo que queremos que ocupe en el espacio del nav, y le sacamos lo que vine por defecto*/
+
+.nav a {
+    width: 30%;
+    text-decoration: none;
+    color: #3b3838;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+/* en la lista de ancors como anterioemnete ta,bien dispplay flex con lo que queda del width le ponemos un justify content y elegir como queremos que se ubiquen los ancors en nuestra pagina y le sacamos lo que vien por defecto*/
+
+.nav__lista {
+    display: flex;
+    width: 70%;
+    justify-content: space-around;
+    list-style: none;
+}
+
+/* HERO, pra que nuestrop texto nos quede dentro de la imagen, la sacamos de nuestro html y la traemos por el css, a esta le definimos la altura(heiht), el ancho(width), le ponemos display, lo centramos y al tecxto tambien, acpomodamos el backgtound como deseamos, despues dfinimos como queremos que se ubiquen sus contenidos ya que es el padre de la imagen y el title y el subtitle*/
+
+.hero {
+    background-image: url(/img/cafe\ 1.jpg);/* buscar imagenes con resolucion de mismo monitor*/
+    background-position: center;
+    background-size: cover;
+    height: 50vh;
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* es para que los textos esten uno abajpo del otro*/
+    
+}
+
+.hero__box {
+    margin-bottom: 220px;
+    margin-left: 130px;
+}
+
+
+.hero__title {
+    font-size: 40px;
+    color: #eee;
+   
+    /* Agrega un fondo semitransparente para mayor legibilidad */
+    /*align-self: flex-start ; si quiero correr el texto*/
+    
+}
+
+.hero__subtitle {
+    font-size: 28px;
+    color: #eee;
+  
+}
+
+/*NOSOTROS*/
+
+/* en esta seccion de nosotros tambien usamos la tecnica del width 100% y los hijos del 60% y el 40%(la img) y con esto logramos que la imagen este de un lado y el texto del otro*/
+
+.nosotros {
+    display: flex;
+    background-color:rgb(71, 54, 36);
+    width: 100%;
+    border: 1px solid black;
+    margin: 5px;
+}
+
+.nosotros__content__title {
+    font-size: 25px;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nosotros__content__subtitle {
+    font-size: 20px;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nosotros__content {
+    width: 60%;
+    padding: 30px;
+    color: white;
+}
+
+.nosotros img {
+    width: 40%;
+    height: auto;
+}
+
+/*CAFE*/
+
+.cafe {
+    background-color: #eee;
+    width: 100%;
+    display: flex;
+    
+}
+
+.cafe__content {
+    width: 50%;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    background-color:  #eee;
+    border: 1px solid black;
+}
+
+.cafe__content__info {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    font-family:Arial, Helvetica, sans-serif;
+   
+}
+
+.cafe__rigth {
+    width: 50%;
+    background-color: rgb(71, 54, 36);
+    color: #eee;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+ 
+  
+}
+
+.cafe__rigth img {
+    display: flex;
+    width: 70%;
+    height: 300px;
+    object-fit:contain;
+    
+
+}
+
+.cafe__content__text {
+    color: black;
+    font-size: 15px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.cafe__content__info {
+    color: black;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.cafe__content__list {
+    color: black;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* FOOTER*/
+/*aca lo que podemos hacer es separarlos con flex box*/
+.footer {
+    background-color: #554940;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+
+}
+
+.footer__left {
+    text-decoration: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 30px;
+}
+
+.footer__left li {
+    list-style-type: none;
+    margin: 5px;
+  
+}
+
+.derechos {
+    text-align: center;
+}
