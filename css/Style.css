@@ -216,6 +216,7 @@ header {
 
 /* FOOTER*/
 /*aca lo que podemos hacer es separarlos con flex box*/
+
 .footer {
     background-color: #554940;
     display: flex;
@@ -238,4 +239,43 @@ header {
 
 .derechos {
     text-align: center;
+}
+
+/*boton de whatsapp*/
+
+/*primero un fonde verde, despues un borde, position:fixer, para que sea fijo, un z-index: 999, para que se posicione encima de los demas,  un border radius para que sea redondo al 50%0, acomodamos el fondo, le ponemos una transition de 0.3s, en otra clase le damos el efecto hover( cuando pase el mouse) aca le ponemos un transform ´para que se agrande cuaqndo pasemos el mouse, con su transicion,  la clase boton le ponemos un ancho width con su transsicion y deouyes una animacion , esta animacion la pondremos en la clase container-boton con el nombre efecto, seguimos con el keyframes, este hara la animacion funcione, pondremos el nombre que le dimos a la animacion, en este caso se allama efecto, dentro de este ppondremos el porcentaje de cuando queremos que empiece el efecto, empezara con un efecto box-shadow con los porcentajes en 0 con un color negro no tan negro, seguido con negro ma oscuro al 100%, con un fecto infinito cuando pasemos el mpouse(este infinited lo colocaremos donde pusismos el nombre de la animacion*/
+
+.container-boton {
+    background-color: #2e6329;
+    border: 1px solid #fff;
+    position: fixed;
+    z-index: 999;
+    border-radius: 50%;
+    bottom: 20px;
+    right: 25px;
+    padding: 25px;
+    transition: ease 0.3s; 
+    animation: efecto 1.2s infinite;
+
+}
+
+.container-boton:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.boton {
+    width: 80px;
+    transition: ease 1s;
+}
+
+@keyframes efecto {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.85);
+
+    }
+    100% {
+        box-shadow: 0 0 0 25px rgba(0, 0, 0, 0)
+}
+
 }
