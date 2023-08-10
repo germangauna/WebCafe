@@ -26,11 +26,13 @@ header {
     width: 100%;
     align-items: center;
     padding: 20px 10px;
+    margin-bottom: 10px;
     background-color: #eee;
 
 }
 
 .logo {
+    color: black;
     font-size: larger;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: bold;
@@ -38,6 +40,24 @@ header {
 
 /* al logo / titulo le poenmos un width de lo que queremos que ocupe en el espacio del nav, y le sacamos lo que vine por defecto*/
 
+/*Animacion*/
+
+.logo span {
+    transition: .5s linear;
+}
+
+.logo:hover span:nth-child(2) {
+    margin-right: 5px;
+}
+
+.logo:hover span {
+    color: white;
+    /*los valores que le podemos poner a text-shadow:
+       sombra horizontal - vertical - blur - color */
+    text-shadow: 0 0 10px rgb(226, 216, 216),
+        0 0 20px rgb(182, 158, 123),
+        0 0 40px rgb(139, 136, 128);
+}
 .nav a {
     width: 30%;
     text-decoration: none;
@@ -53,6 +73,11 @@ header {
     width: 70%;
     justify-content: space-around;
     list-style: none;
+}
+
+
+.nav__lista__item:hover {
+    font-size: 20px;
 }
 
 /* HERO, pra que nuestrop texto nos quede dentro de la imagen, la sacamos de nuestro html y la traemos por el css, a esta le definimos la altura(heiht), el ancho(width), le ponemos display, lo centramos y al tecxto tambien, acpomodamos el backgtound como deseamos, despues dfinimos como queremos que se ubiquen sus contenidos ya que es el padre de la imagen y el title y el subtitle*/
@@ -195,7 +220,7 @@ header {
     background-color: #554940;
     display: flex;
     width: 100%;
-    justify-content: space-evenly;
+    justify-content:space-between;
 
 }
 
